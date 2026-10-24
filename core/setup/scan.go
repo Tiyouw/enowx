@@ -94,7 +94,7 @@ func Scan() proto.SetupScan {
 		s.GitEmail = output("git", "config", "--global", "user.email")
 	}
 	if _, ok := s.Tools["gh"]; ok {
-		s.GitHub = exec.Command("gh", "auth", "status").Run() == nil
+		s.GitHub = scanCommand(context.Background(), "gh", "auth", "status").Run() == nil
 	}
 	return s
 }
@@ -103,14 +103,14 @@ func Scan() proto.SetupScan {
 func version(path string, args []string) string {
 	ctx, cancel := context.WithTimeout(context.Background(), scanTimeout)
 	defer cancel()
-	out, _ := exec.CommandContext(ctx, path, args...).CombinedOutput()
+	out, _ := scanCommand(ctx, path, args...).CombinedOutput()
 	return versionPattern.FindString(string(out))
 }
 
 func output(name string, args ...string) string {
 	ctx, cancel := context.WithTimeout(context.Background(), scanTimeout)
 	defer cancel()
-	out, _ := exec.CommandContext(ctx, name, args...).Output()
+	out, _ := scanCommand(ctx, name, args...).Output()
 	return strings.TrimSpace(string(out))
 }
 
