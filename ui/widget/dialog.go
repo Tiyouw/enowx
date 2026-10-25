@@ -28,14 +28,18 @@ func dialogMotion(backdrop, panel ui.Element) {
 }
 
 // Sheet draws a modal dialog in three parts while *open: a header row,
-// a body and a footer row, split by hairlines.
+// a scrollable body and a footer row, split by hairlines. The header and
+// footer stay visible when the body is taller than the window.
 func Sheet(c *ui.Context, open *bool, width float32, header, body, footer func()) {
 	ui.DialogBase(c, open, func(backdrop, panel ui.Element) {
 		dialogMotion(backdrop, panel)
-		Float(panel.Width(width).Radius(theme.RadiusPanel).Background(theme.Dialog).Border(1, theme.BorderStrong))
-		ui.Row(c).FillWidth().Padding(16, 20, 14, 20).Gap(10).BorderWidth(0, 0, 1, 0).BorderColor(theme.Border).Children(header)
-		ui.Column(c).FillWidth().Padding(18, 20, 20, 20).Gap(18).Children(body)
-		ui.Row(c).FillWidth().Padding(14, 20).Gap(8).BorderWidth(1, 0, 0, 0).BorderColor(theme.Border).Children(footer)
+		_, height := c.Size()
+		Float(panel.Width(width).MaxHeight(max(0, height-32)).Radius(theme.RadiusPanel).Background(theme.Dialog).Border(1, theme.BorderStrong))
+		ui.Row(c).FillWidth().Shrink(0).Padding(16, 20, 14, 20).Gap(10).BorderWidth(0, 0, 1, 0).BorderColor(theme.Border).Children(header)
+		ui.Scroll(c).FillWidth().Shrink(1).MinHeight(0).Children(func() {
+			ui.Column(c).FillWidth().Padding(18, 20, 20, 20).Gap(18).Children(body)
+		})
+		ui.Row(c).FillWidth().Shrink(0).Padding(14, 20).Gap(8).BorderWidth(1, 0, 0, 0).BorderColor(theme.Border).Children(footer)
 	})
 }
 
