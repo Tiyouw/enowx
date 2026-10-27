@@ -1,0 +1,54 @@
+ok  	github.com/enowx/enowx/client	1.693s
+ok  	github.com/enowx/enowx/proto	1.856s
+ok  	github.com/enowx/enowx/core/usersync	2.458s
+ok  	github.com/enowx/enowx/cmd/enowx	5.893s
+=== RUN   TestSyncReadLargerThanFrame
+--- PASS: TestSyncReadLargerThanFrame (1.19s)
+=== RUN   TestSyncWriteLargerThanFrame
+--- PASS: TestSyncWriteLargerThanFrame (1.05s)
+=== RUN   TestUserSyncLargerThanFrame
+--- PASS: TestUserSyncLargerThanFrame (2.00s)
+=== RUN   TestOversizedSyncReplyKeepsConnection
+--- PASS: TestOversizedSyncReplyKeepsConnection (0.47s)
+=== RUN   TestSyncLargeFileAndStaleWrites
+--- PASS: TestSyncLargeFileAndStaleWrites (1.30s)
+=== RUN   TestSyncSingleOversizedFileKeepsConnection
+--- PASS: TestSyncSingleOversizedFileKeepsConnection (0.13s)
+=== RUN   TestSmallSyncFilesStayBatched
+--- PASS: TestSmallSyncFilesStayBatched (0.24s)
+=== RUN   TestUserDataSyncsBetweenDaemons
+--- PASS: TestUserDataSyncsBetweenDaemons (1.35s)
+=== RUN   TestSyncReadLargerThanFrame
+--- PASS: TestSyncReadLargerThanFrame (0.85s)
+=== RUN   TestSyncWriteLargerThanFrame
+--- PASS: TestSyncWriteLargerThanFrame (0.94s)
+=== RUN   TestUserSyncLargerThanFrame
+--- PASS: TestUserSyncLargerThanFrame (1.67s)
+=== RUN   TestOversizedSyncReplyKeepsConnection
+--- PASS: TestOversizedSyncReplyKeepsConnection (0.47s)
+=== RUN   TestSyncLargeFileAndStaleWrites
+--- PASS: TestSyncLargeFileAndStaleWrites (1.56s)
+=== RUN   TestSyncSingleOversizedFileKeepsConnection
+--- PASS: TestSyncSingleOversizedFileKeepsConnection (0.14s)
+=== RUN   TestSmallSyncFilesStayBatched
+--- PASS: TestSmallSyncFilesStayBatched (0.25s)
+=== RUN   TestUserDataSyncsBetweenDaemons
+--- PASS: TestUserDataSyncsBetweenDaemons (1.33s)
+=== RUN   TestSyncReadLargerThanFrame
+--- PASS: TestSyncReadLargerThanFrame (0.93s)
+=== RUN   TestSyncWriteLargerThanFrame
+--- PASS: TestSyncWriteLargerThanFrame (0.95s)
+=== RUN   TestUserSyncLargerThanFrame
+--- PASS: TestUserSyncLargerThanFrame (1.93s)
+=== RUN   TestOversizedSyncReplyKeepsConnection
+--- PASS: TestOversizedSyncReplyKeepsConnection (0.40s)
+=== RUN   TestSyncLargeFileAndStaleWrites
+--- PASS: TestSyncLargeFileAndStaleWrites (1.15s)
+=== RUN   TestSyncSingleOversizedFileKeepsConnection
+--- PASS: TestSyncSingleOversizedFileKeepsConnection (0.12s)
+=== RUN   TestSmallSyncFilesStayBatched
+--- PASS: TestSmallSyncFilesStayBatched (0.27s)
+=== RUN   TestUserDataSyncsBetweenDaemons
+--- PASS: TestUserDataSyncsBetweenDaemons (1.31s)
+PASS
+ok  	github.com/enowx/enowx/daemon	26.129s

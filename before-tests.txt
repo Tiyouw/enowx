@@ -1,0 +1,17 @@
+=== RUN   TestDaemonCopyPreservesBuildIdentity
+    daemoncopy_build_test.go:32: identical executables have different build identities: source=15/2023-11-14T22:13:20.1234567Z copy=15/2026-10-27T09:00:12.3919494Z
+--- FAIL: TestDaemonCopyPreservesBuildIdentity (0.04s)
+FAIL
+FAIL	github.com/enowx/enowx/cmd/enowx	7.381s
+=== RUN   TestSyncReadLargerThanFrame
+    usersync_frames_test.go:41: read 18 MiB of revisions: client: connection closed (connection: EOF)
+--- FAIL: TestSyncReadLargerThanFrame (0.49s)
+=== RUN   TestSyncWriteLargerThanFrame
+    usersync_frames_test.go:59: write 18 MiB of revisions: applied=0 stale=0 error=proto: payload of 25166237 bytes exceeds limit
+--- FAIL: TestSyncWriteLargerThanFrame (0.22s)
+=== RUN   TestUserSyncLargerThanFrame
+    usersync_frames_test.go:79: sync 18 MiB between daemons: sent=0 error=client: connection closed
+--- FAIL: TestUserSyncLargerThanFrame (0.53s)
+FAIL
+FAIL	github.com/enowx/enowx/daemon	5.102s
+FAIL

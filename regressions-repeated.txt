@@ -1,0 +1,58 @@
+=== RUN   TestDaemonCopyPreservesBuildIdentity
+--- PASS: TestDaemonCopyPreservesBuildIdentity (0.02s)
+=== RUN   TestDaemonCopyBringsTheLibraries
+--- PASS: TestDaemonCopyBringsTheLibraries (0.02s)
+=== RUN   TestDaemonCopyPreservesBuildIdentity
+--- PASS: TestDaemonCopyPreservesBuildIdentity (0.01s)
+=== RUN   TestDaemonCopyBringsTheLibraries
+--- PASS: TestDaemonCopyBringsTheLibraries (0.02s)
+=== RUN   TestDaemonCopyPreservesBuildIdentity
+--- PASS: TestDaemonCopyPreservesBuildIdentity (0.01s)
+=== RUN   TestDaemonCopyBringsTheLibraries
+--- PASS: TestDaemonCopyBringsTheLibraries (0.02s)
+PASS
+ok  	github.com/enowx/enowx/cmd/enowx	9.926s
+=== RUN   TestSyncReadLargerThanFrame
+--- PASS: TestSyncReadLargerThanFrame (0.89s)
+=== RUN   TestSyncWriteLargerThanFrame
+--- PASS: TestSyncWriteLargerThanFrame (0.63s)
+=== RUN   TestUserSyncLargerThanFrame
+--- PASS: TestUserSyncLargerThanFrame (1.40s)
+=== RUN   TestOversizedSyncReplyKeepsConnection
+--- PASS: TestOversizedSyncReplyKeepsConnection (0.35s)
+=== RUN   TestSyncLargeFileAndStaleWrites
+--- PASS: TestSyncLargeFileAndStaleWrites (1.00s)
+=== RUN   TestSyncSingleOversizedFileKeepsConnection
+--- PASS: TestSyncSingleOversizedFileKeepsConnection (0.36s)
+=== RUN   TestSmallSyncFilesStayBatched
+--- PASS: TestSmallSyncFilesStayBatched (0.99s)
+=== RUN   TestSyncReadLargerThanFrame
+--- PASS: TestSyncReadLargerThanFrame (0.85s)
+=== RUN   TestSyncWriteLargerThanFrame
+--- PASS: TestSyncWriteLargerThanFrame (0.80s)
+=== RUN   TestUserSyncLargerThanFrame
+--- PASS: TestUserSyncLargerThanFrame (1.47s)
+=== RUN   TestOversizedSyncReplyKeepsConnection
+--- PASS: TestOversizedSyncReplyKeepsConnection (0.38s)
+=== RUN   TestSyncLargeFileAndStaleWrites
+--- PASS: TestSyncLargeFileAndStaleWrites (1.24s)
+=== RUN   TestSyncSingleOversizedFileKeepsConnection
+--- PASS: TestSyncSingleOversizedFileKeepsConnection (0.13s)
+=== RUN   TestSmallSyncFilesStayBatched
+--- PASS: TestSmallSyncFilesStayBatched (0.29s)
+=== RUN   TestSyncReadLargerThanFrame
+--- PASS: TestSyncReadLargerThanFrame (0.54s)
+=== RUN   TestSyncWriteLargerThanFrame
+--- PASS: TestSyncWriteLargerThanFrame (0.64s)
+=== RUN   TestUserSyncLargerThanFrame
+--- PASS: TestUserSyncLargerThanFrame (1.47s)
+=== RUN   TestOversizedSyncReplyKeepsConnection
+--- PASS: TestOversizedSyncReplyKeepsConnection (0.42s)
+=== RUN   TestSyncLargeFileAndStaleWrites
+--- PASS: TestSyncLargeFileAndStaleWrites (1.12s)
+=== RUN   TestSyncSingleOversizedFileKeepsConnection
+--- PASS: TestSyncSingleOversizedFileKeepsConnection (0.16s)
+=== RUN   TestSmallSyncFilesStayBatched
+--- PASS: TestSmallSyncFilesStayBatched (0.49s)
+PASS
+ok  	github.com/enowx/enowx/daemon	22.993s
